@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+@use "../abstracts/function" as *;
+
+@mixin btn-base($w: 260px) {
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  min-width: $w;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 40px;
+  background-color: $main;
+  color: $white;
+  font-weight: $bold;
+  text-align: center;
+
+  &--arrow-right {
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 24px;
+      height: 24px;
+      transform: translateY(-50%);
+      transition: right 0.3s;
+      background: image-url("common/ico_arrow_right.svg") no-repeat;
+    }
+  }
+}
+
+@include md-pc {
+  .button-primary {
+    @include btn-base;
+
+    &--arrow-right {
+      &:hover {
+        &::before {
+          right: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include md-sp {
+  .button-primary {
+    @include btn-base;
+  }
+}

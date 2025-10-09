@@ -1,0 +1,11 @@
+#file ignore
+Thumbs.db
+.Ds_Store
+.vscode/settings.json
+node_modules/
+
+#directory ignore
+.sass-cache/
+
+#lock file
+package-lock.json

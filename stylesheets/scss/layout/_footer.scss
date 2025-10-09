@@ -1,0 +1,144 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+
+@include md-pc {
+  .footer {
+    background-color: $main-light;
+
+    &__inner {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    &__link {
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__copyright {
+      padding: 8px;
+      background: $main;
+      color: $white;
+      font-size: $font-xs;
+      font-weight: $bold;
+      text-align: center;
+    }
+  }
+
+  .footer-nav {
+    margin-bottom: 24px;
+
+    &__list {
+      display: flex;
+      gap: 40px;
+    }
+
+    &__link {
+      position: relative;
+      padding-bottom: 8px;
+      transition: color 0.3s;
+      color: $text;
+      font-weight: $bold;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        transition: width 0.3s;
+        border-radius: 100vh;
+        background-color: $main;
+      }
+
+      &:hover {
+        color: $main;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .footer-sns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__link {
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@include md-sp {
+  .footer {
+    background-color: $main-light;
+
+    &__inner {
+      padding: 32px 20px;
+    }
+
+    &__logo {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    &__copyright {
+      padding: 8px;
+      background: $main;
+      color: $white;
+      font-size: $font-xs;
+      font-weight: $bold;
+      text-align: center;
+    }
+  }
+
+  .footer-nav {
+    margin-bottom: 20px;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__link {
+      position: relative;
+      padding-bottom: 8px;
+      color: $text;
+      font-weight: $bold;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 100vh;
+        background-color: $main;
+      }
+    }
+  }
+
+  .footer-sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}

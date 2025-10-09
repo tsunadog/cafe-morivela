@@ -1,0 +1,5 @@
+$image-base-path: "../images";
+
+@function image-url($path) {
+  @return url("#{$image-base-path}/#{$path}");
+}

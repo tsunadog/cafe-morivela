@@ -1,0 +1,63 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-property-sort-order-smacss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-blockless", "first-nested"],
+        "ignore": ["after-comment"],
+        "ignoreAtRules": ["else"]
+      }
+    ],
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["include", "mixin", "each", "use", "forward", "for"]
+      }
+    ],
+
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "color-named": "never",
+    "comment-no-empty": true,
+    "comment-empty-line-before": "always",
+    "comment-whitespace-inside": "always",
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "function-calc-no-unspaced-operator": true,
+    "function-url-quotes": "always",
+    "function-name-case": "lower",
+    "font-family-no-duplicate-names": true,
+    "font-family-name-quotes": "always-unless-keyword",
+    "length-zero-no-unit": true,
+    "media-feature-name-no-unknown": true,
+    "no-duplicate-at-import-rules": true,
+    "no-duplicate-selectors": true,
+    "no-descending-specificity": null,
+    "no-empty-source": true,
+    "property-no-unknown": true,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-type-no-unknown": true,
+    "selector-type-case": "lower",
+    "selector-class-pattern": null,
+    "selector-id-pattern": null,
+    "string-no-newline": true,
+    "shorthand-property-no-redundant-values": true,
+    "time-min-milliseconds": 100,
+    "unit-no-unknown": true,
+    "value-keyword-case": "lower",
+    "keyframes-name-pattern": null,
+    "scss/at-mixin-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/percent-placeholder-pattern": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/double-slash-comment-whitespace-inside": "always"
+  }
+}

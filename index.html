@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Morivela</title>
+
+    <!-- Googleフォント -->
+    <!-- TODO: function.phpに移す -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- 共通CSS-->
+    <link rel="stylesheet" href="./stylesheets/normalize.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <!-- 共通JS -->
+    <script src="./javascripts/common.js"></script>
+  </head>
+
+  <body>
+    <!-- #### header start ### -->
+    <header class="header">
+      <a href="/" class="header__logo">
+        <img
+          src="./images/common/logo.png"
+          alt="Cafe Morivela"
+          width="133"
+          height="42"
+        />
+      </a>
+      <button class="header-button js-menu-button" aria-label="メニューを開く">
+        <span></span>
+      </button>
+      <nav class="header-nav js-menu">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">わたしたちのこだわり</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">メニュー</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">ニュース</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">アクセス</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- #### header end ### -->
+
+    <!-- #### main start ### -->
+    <main class="main">
+      <section class="top">
+        <div class="top-hero">
+          <h1 class="top-hero__logo">
+            <img
+              src="./images/common/logo_white.png"
+              alt="Cafe Morivela"
+              width="240"
+              height="82"
+            />
+          </h1>
+          <div class="top-hero__text-box">
+            <p class="top-hero__heading">日常に、やさしい彩りを。</p>
+            <p class="top-hero__text">
+              無垢の木とグリーンに囲まれた空間で、丁寧に淹れた一杯を。
+            </p>
+          </div>
+          <div class="swiper top-hero__slider js-top-hero">
+            <div class="swiper-wrapper">
+              <div class="top-hero__image swiper-slide">
+                <img src="./images/top/img_hero.jpg" alt="" />
+              </div>
+              <div class="top-hero__image swiper-slide">
+                <img src="./images/top/img_hero02.jpg" alt="" />
+              </div>
+              <div class="top-hero__image swiper-slide">
+                <img src="./images/top/img_hero03.jpg" alt="" />
+              </div>
+            </div>
+
+            <button class="top-hero__control js-top-hero-control">
+              停止する
+            </button>
+
+            <div class="top-hero__pagination js-top-hero-pagination"></div>
+          </div>
+
+          <div class="top-hero__scroll">Scroll</div>
+        </div>
+
+        <!-- ### About start ### -->
+        <section class="top-about">
+          <h2 class="heading"><span>About</span>わたしたちのこだわり</h2>
+          <div class="top-about__inner">
+            <div class="top-about__image">
+              <img
+                src="./images/about/img_about.jpg"
+                alt=""
+                width="355"
+                height="355"
+              />
+            </div>
+            <div class="top-about__content">
+              <p class="top-about__text">
+                忙しい毎日の中で、ほっと深呼吸できるような場所をつくりたい。<br />
+                そんな想いから、このカフェは生まれました。
+              </p>
+              <p class="top-about__text">
+                無垢の木のぬくもりと、グリーンのやさしい息づかい。<br />
+                一杯のコーヒーを通して、心が少しだけ軽くなるような時間をお届けします。
+              </p>
+              <p class="top-about__text">
+                素材はできるだけ自然のままに。<br />
+                季節ごとに変わる植物や香りが、訪れるたびに新しい彩りを添えてくれます。
+              </p>
+              <p class="top-about__text">
+                わたしたちは、すべての瞬間に“やさしさ”を込めています。
+              </p>
+              <div class="top-about__button-box">
+                <a href="" class="button-primary button-primary--arrow-right"
+                  >もっと見る</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ### About end ### -->
+
+        <!-- ### Menu start ### -->
+        <section class="top-section top-section--bg">
+          <div class="top-section__inner">
+            <h2 class="heading"><span>Menu</span>メニュー</h2>
+
+            <ul class="menu-list">
+              <li class="menu-list__item">
+                <div class="menu-list__image">
+                  <img
+                    src="./images/about/img_about.jpg"
+                    alt=""
+                    width="280"
+                    height="209"
+                  />
+                </div>
+                <div class="menu-list__text-box">
+                  <p class="menu-list__title">Latte</p>
+                  <p class="menu-list__price">¥500</p>
+                </div>
+              </li>
+              <li class="menu-list__item">
+                <div class="menu-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </div>
+                <div class="menu-list__text-box">
+                  <p class="menu-list__title">Latte</p>
+                  <p class="menu-list__price">¥500</p>
+                </div>
+              </li>
+              <li class="menu-list__item">
+                <div class="menu-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </div>
+                <div class="menu-list__text-box">
+                  <p class="menu-list__title">Latte</p>
+                  <p class="menu-list__price">¥500</p>
+                </div>
+              </li>
+              <li class="menu-list__item">
+                <div class="menu-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </div>
+                <div class="menu-list__text-box">
+                  <p class="menu-list__title">Latte</p>
+                  <p class="menu-list__price">¥500</p>
+                </div>
+              </li>
+              <li class="menu-list__item">
+                <div class="menu-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </div>
+                <div class="menu-list__text-box">
+                  <p class="menu-list__title">Latte</p>
+                  <p class="menu-list__price">¥500</p>
+                </div>
+              </li>
+              <li class="menu-list__item">
+                <div class="menu-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </div>
+                <div class="menu-list__text-box">
+                  <p class="menu-list__title">Latte</p>
+                  <p class="menu-list__price">¥500</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="top-section__button-box">
+              <a href="" class="button-primary button-primary--arrow-right"
+                >メニューを見る</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- ### Menu end ### -->
+
+        <!-- ### News start ### -->
+        <section class="top-section">
+          <div class="top-section__inner">
+            <h2 class="heading"><span>News</span>ニュース</h2>
+
+            <ul class="news-list">
+              <li class="news-list__item">
+                <a href="" class="news-list__image">
+                  <img
+                    src="./images/about/img_about.jpg"
+                    alt=""
+                    width="280"
+                    height="209"
+                  />
+                </a>
+                <div class="news-list__content">
+                  <p class="news-list__date">2024.00.00</p>
+                  <a href="" class="news-list__tag">お知らせ</a>
+                  <a href="" class="news-list__title">
+                    お知らせタイトルが入ります。お知らせタイトルが入ります。
+                  </a>
+                </div>
+              </li>
+              <li class="news-list__item">
+                <a href="" class="news-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </a>
+                <div class="news-list__content">
+                  <p class="news-list__date">2024.00.00</p>
+                  <a href="" class="news-list__tag">お知らせ</a>
+                  <a href="" class="news-list__title">
+                    お知らせタイトルが入ります。お知らせタイトルが入ります。
+                  </a>
+                </div>
+              </li>
+              <li class="news-list__item">
+                <a href="" class="news-list__image">
+                  <img src="" alt="" width="280" height="209" />
+                </a>
+                <div class="news-list__content">
+                  <p class="news-list__date">2024.00.00</p>
+                  <a href="" class="news-list__tag">お知らせ</a>
+                  <a href="" class="news-list__title">
+                    お知らせタイトルが入ります。お知らせタイトルが入ります。
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="top-section__button-box">
+              <a href="" class="button-primary button-primary--arrow-right"
+                >ニュースを見る</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- ### News end ### -->
+
+        <!-- ### Access start ### -->
+        <section class="top-access">
+          <div class="top-access__inner">
+            <h2 class="heading"><span>Access</span>アクセス</h2>
+            <div class="top-access__box">
+              <div class="top-access__map">
+                <img src="" alt="地図" width="355" height="355" />
+              </div>
+              <div class="top-access__content">
+                <dl class="top-access-list">
+                  <div class="top-access-list__block">
+                    <dt class="top-access-list__title">住所</dt>
+                    <dd class="top-access-list__data">
+                      〒000-0000<br />東京都〇〇区〇〇町0-0-0 Cafe Morivela
+                    </dd>
+                  </div>
+                  <div class="top-access-list__block">
+                    <dt class="top-access-list__title">営業時間</dt>
+                    <dd class="top-access-list__data">
+                      月〜金：8:00〜20:00（L.O：19:30）<br />
+                      土日祝：7:30〜21:00（L.O：20:30）
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ### Access end ### -->
+      </section>
+    </main>
+    <!-- #### main end ### -->
+
+    <!-- #### footer start ### -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <a href="/" class="footer__link">
+            <img
+              src="./images/common/logo.png"
+              alt="Cafe Morivela"
+              width="133"
+              height="42"
+            />
+          </a>
+        </div>
+        <div class="footer__box">
+          <nav class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">わたしたちのこだわり</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">メニュー</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">ニュース</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">アクセス</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="footer-sns">
+            <li class="footer-sns__item">
+              <a href="/" class="footer-sns__link" target="_blank"
+                ><img
+                  src="./images/common/ico_instagram.svg"
+                  alt="Instagram"
+                  width="32"
+                  height="32"
+              /></a>
+            </li>
+            <li class="footer-sns__item">
+              <a href="/" class="footer-sns__link" target="_blank"
+                ><img
+                  src="./images/common/ico_x.svg"
+                  alt="X"
+                  width="28"
+                  height="28"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">© Cafe Morivela</div>
+    </footer>
+    <!-- #### footer end ### -->
+  </body>
+</html>
