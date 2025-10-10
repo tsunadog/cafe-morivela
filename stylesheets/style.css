@@ -1279,5 +1279,110 @@ button {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .about {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 40px 40px 80px;
+  }
+  .about-list {
+    display: flex;
+    gap: 64px;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .about-list__item {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .about-list__item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .about-list__title-box {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .about-list__number {
+    opacity: 0.4;
+    color: #d4a373;
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .about-list__title {
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .about-list__text {
+    margin-block: 0;
+    line-height: 2;
+  }
+  .about-list__image {
+    flex-shrink: 0;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+  }
+  .about-list__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (width <= 767px) {
+  .about {
+    padding: 24px 20px 64px;
+  }
+  .about-list {
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+  }
+  .about-list__title-box {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .about-list__number {
+    opacity: 0.4;
+    color: #d4a373;
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .about-list__title {
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .about-list__text {
+    margin-block: 0 16px;
+    line-height: 2;
+  }
+  .about-list__image {
+    max-width: 360px;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+  }
+  .about-list__item:nth-child(odd) .about-list__image {
+    margin-left: auto;
+  }
+  .about-list__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
