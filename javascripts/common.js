@@ -1,3 +1,21 @@
+//--------
+// スクロール禁止
+//--------
+function htmlFix() {
+  document.documentElement.classList.add("is-fixed");
+  window.scrollTo({
+    top: 0,
+    behavior: "instant",
+  });
+}
+//--------
+// スクロール禁止解除
+//--------
+function htmlScroll() {
+  document.documentElement.classList.remove("is-fixed");
+}
+
+//　**＊＊ 読み込み時　*＊＊＊
 document.addEventListener("DOMContentLoaded", () => {
   //--------
   // トップページ
@@ -44,46 +62,57 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector(".js-menu-button")
     .addEventListener("click", function () {
+      const button = this;
       const menu = document.querySelector(".js-menu");
       if (this.classList.contains("is-open")) {
-        htmlScroll();
-        this.classList.remove("is-open");
-        this.setAttribute("aria-label", "メニューを開く");
-        menu.style.transform = "translateX(100%)";
-        menu.addEventListener(
-          "transitionend",
-          () => {
-            menu.classList.remove("is-open");
-            menu.style.display = "none";
-            menu.style.transform = "";
-          },
-          { once: true }
-        );
+        menuClose(button, menu);
       } else {
-        htmlFix();
-        this.classList.add("is-open");
-        this.setAttribute("aria-label", "メニューを閉じる");
-        menu.style.display = "block";
-        requestAnimationFrame(() => {
-          menu.classList.add("is-open");
-        });
+        menuOpen(button, menu);
       }
     });
 });
 
+// ＊＊＊＊ リサイズ時 ＊＊＊＊
+window.addEventListener("resize", () => {
+  const button = document.querySelector(".js-menu-button");
+  const menu = document.querySelector(".js-menu");
+  if (window.innerWidth >= 768 && button.classList.contains("is-open")) {
+    menu.style.display = "";
+    menuClose(button, menu);
+    menu.style.transform = "";
+  }
+});
+
 //--------
-// スクロール禁止
+// ヘッダー
+// ハンバーガーメニュー open
 //--------
-function htmlFix() {
-  document.documentElement.classList.add("is-fixed");
-  window.scrollTo({
-    top: 0,
-    behavior: "instant",
+function menuOpen(button, menu) {
+  htmlFix();
+  button.classList.add("is-open");
+  button.setAttribute("aria-label", "メニューを閉じる");
+  menu.style.display = "block";
+  requestAnimationFrame(() => {
+    menu.classList.add("is-open");
   });
 }
+
 //--------
-// スクロール禁止解除
+// ヘッダー
+// ハンバーガーメニュー close
 //--------
-function htmlScroll() {
-  document.documentElement.classList.remove("is-fixed");
+function menuClose(button, menu) {
+  htmlScroll();
+  button.classList.remove("is-open");
+  button.setAttribute("aria-label", "メニューを開く");
+  menu.style.transform = "translateX(100%)";
+  menu.addEventListener(
+    "transitionend",
+    () => {
+      menu.classList.remove("is-open");
+      menu.style.display = "none";
+      menu.style.transform = "";
+    },
+    { once: true }
+  );
 }
