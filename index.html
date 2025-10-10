@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
 
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
     <!-- Swiper -->
     <link
       rel="stylesheet"
@@ -64,9 +68,34 @@
 
     <!-- #### main start ### -->
     <main class="main">
+      <!-- ローディング -->
+      <div class="top-loading js-loading">
+        <p class="top-loading__text js-loading-text">Loading...</p>
+        <div class="top-loading__box js-loading-image">
+          <img
+            src="./images/common/ico_coffee.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <img
+            src="./images/common/ico_coffee.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <img
+            src="./images/common/ico_coffee.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+        </div>
+      </div>
+
       <section class="top">
         <div class="top-hero">
-          <h1 class="top-hero__logo">
+          <h1 class="top-hero__logo js-top-logo">
             <img
               src="./images/common/logo_white.png"
               alt="Cafe Morivela"
@@ -74,7 +103,7 @@
               height="82"
             />
           </h1>
-          <div class="top-hero__text-box">
+          <div class="top-hero__text-box js-top-text">
             <p class="top-hero__heading">日常に、やさしい彩りを。</p>
             <p class="top-hero__text">
               無垢の木とグリーンに囲まれた空間で、丁寧に淹れた一杯を。

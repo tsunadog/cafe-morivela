@@ -464,6 +464,28 @@ button {
   }
 }
 @media screen and (min-width: 768px) {
+  .top-loading {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fffcf9;
+  }
+  .top-loading__text {
+    margin-block: 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .top-loading__box {
+    display: flex;
+    gap: 24px;
+  }
   .top-hero {
     position: relative;
     height: calc(100vh - 98px);
@@ -477,6 +499,7 @@ button {
     width: 240px;
     margin-block: 0;
     transform: translate(-50%, -50%);
+    opacity: 0;
   }
   .top-hero__logo img {
     width: 100%;
@@ -487,6 +510,7 @@ button {
     z-index: 2;
     bottom: 60px;
     left: 120px;
+    opacity: 0;
     color: #fff;
   }
   .top-hero__heading {
@@ -687,6 +711,28 @@ button {
   }
 }
 @media screen and (width <= 767px) {
+  .top-loading {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fffcf9;
+  }
+  .top-loading__text {
+    margin-block: 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .top-loading__box {
+    display: flex;
+    gap: 24px;
+  }
   .top-hero {
     position: relative;
     height: calc(100svh - 78px);
@@ -700,6 +746,7 @@ button {
     width: 200px;
     margin-block: 0;
     transform: translateX(-50%);
+    opacity: 0;
   }
   .top-hero__logo img {
     width: 100%;
@@ -715,6 +762,7 @@ button {
     margin-inline: auto;
     padding-inline: 40px;
     transform: translate(-50%, -50%);
+    opacity: 0;
     color: #fff;
   }
   .top-hero__heading {
@@ -1290,7 +1338,6 @@ button {
     display: flex;
     gap: 64px;
     flex-direction: column;
-    padding-top: 40px;
   }
   .about-list__item {
     display: flex;

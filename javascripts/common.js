@@ -17,13 +17,16 @@ function htmlScroll() {
 
 //　**＊＊ 読み込み時　*＊＊＊
 document.addEventListener("DOMContentLoaded", () => {
+  let topHero;
+
   //--------
   // トップページ
   // ヒーロースライダー
   //--------
   if (document.querySelector(".js-top-hero")) {
-    const topHero = new Swiper(".js-top-hero", {
+    topHero = new Swiper(".js-top-hero", {
       loop: true,
+      allowTouchMove: false,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
@@ -35,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
-    //--------
-    // トップページ
-    // ヒーロースライダー 再生/停止ボタン
-    //--------
+    // 初期状態では自動再生を止めておく
+    topHero.autoplay.stop();
+
+    // 再生/停止ボタン
     document
       .querySelector(".js-top-hero-control")
       .addEventListener("click", function () {
@@ -53,6 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
           topHero.autoplay.stop();
         }
       });
+  }
+
+  // ローディング完了後にスライダー開始
+  if (document.querySelector(".js-loading")) {
+    loading().then(() => {
+      if (topHero) {
+        topHero.slideToLoop(0, 0); // 最初のスライドから
+        topHero.autoplay.start();
+      }
+      gsap
+        .timeline()
+        .to(".js-top-logo", { opacity: 1, duration: 0.6 })
+        .to(".js-top-text", { opacity: 1, duration: 0.6 });
+    });
   }
 
   //--------
@@ -82,6 +99,53 @@ window.addEventListener("resize", () => {
     menu.style.transform = "";
   }
 });
+
+//--------
+// ローディングアニメーション
+//--------
+function loading() {
+  return new Promise(async (resolve) => {
+    await document.fonts.ready;
+
+    let split = SplitText.create(".js-loading-text", { type: "words, chars" });
+
+    gsap
+      .timeline({
+        onComplete: () => {
+          document.querySelector(".js-loading").remove();
+          resolve();
+        },
+      })
+      .from(split.chars, {
+        duration: 0.6,
+        y: -20,
+        autoAlpha: 0,
+        stagger: 0.05,
+      })
+      .from(
+        ".js-loading-image img",
+        {
+          y: "-20",
+          autoAlpha: 0,
+          stagger: 0.6,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        ">0.3"
+      )
+      .to(
+        ".js-loading",
+        {
+          autoAlpha: 0,
+          duration: 0.8,
+          onStart: () => {
+            window.scrollTo({ top: 0 });
+          },
+        },
+        ">0.8"
+      );
+  });
+}
 
 //--------
 // ヘッダー

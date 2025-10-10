@@ -25,6 +25,31 @@
 }
 
 @include md-pc {
+  .top-loading {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: $main-bg;
+
+    &__text {
+      margin-block: 0 24px;
+      font-size: $font-xxl;
+      font-weight: $bold;
+    }
+
+    &__box {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
   .top-hero {
     position: relative;
     height: calc(100vh - 98px);
@@ -38,6 +63,7 @@
       width: 240px;
       margin-block: 0;
       transform: translate(-50%, -50%);
+      opacity: 0;
 
       img {
         width: 100%;
@@ -50,6 +76,7 @@
       z-index: 2;
       bottom: 60px;
       left: 120px;
+      opacity: 0;
       color: $white;
     }
 
@@ -289,6 +316,31 @@
 }
 
 @include md-sp {
+  .top-loading {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: $main-bg;
+
+    &__text {
+      margin-block: 0 24px;
+      font-size: $font-xxl;
+      font-weight: $bold;
+    }
+
+    &__box {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
   .top-hero {
     position: relative;
     height: calc(100svh - 78px);
@@ -302,6 +354,7 @@
       width: 200px;
       margin-block: 0;
       transform: translateX(-50%);
+      opacity: 0;
 
       img {
         width: 100%;
@@ -319,6 +372,7 @@
       margin-inline: auto;
       padding-inline: 40px;
       transform: translate(-50%, -50%);
+      opacity: 0;
       color: $white;
     }
 
