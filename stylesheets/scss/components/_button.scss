@@ -31,6 +31,21 @@
       background: image-url("common/ico_arrow_right.svg") no-repeat;
     }
   }
+
+  &--arrow-left {
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      width: 24px;
+      height: 24px;
+      transform: translateY(-50%);
+      transition: left 0.3s;
+      background: image-url("common/ico_arrow_left.svg") no-repeat;
+    }
+  }
 }
 
 @include md-pc {
@@ -44,11 +59,31 @@
         }
       }
     }
+
+    &--arrow-left {
+      &:hover {
+        &::before {
+          left: 16px;
+        }
+      }
+    }
+  }
+
+  .button-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
   }
 }
 
 @include md-sp {
   .button-primary {
     @include btn-base;
+  }
+
+  .button-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
   }
 }

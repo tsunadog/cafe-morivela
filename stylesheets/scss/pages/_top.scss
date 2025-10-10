@@ -227,12 +227,6 @@
       margin: 0 auto;
       padding-inline: 40px;
     }
-
-    &__button-box {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
   }
 
   .top-access {
@@ -480,12 +474,6 @@
 
     &--bg {
       background-color: $main-light;
-    }
-
-    &__button-box {
-      display: flex;
-      justify-content: center;
-      margin-top: 32px;
     }
   }
 

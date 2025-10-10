@@ -6,7 +6,33 @@
     box-sizing: border-box;
     max-width: 1000px;
     margin-inline: auto;
-    padding: 64px 40px 80px;
+    padding: 32px 40px 80px;
+  }
+
+  .news-tag {
+    display: inline-flex;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 160px;
+    padding: 4px 20px;
+    transition: color 0.3s, background 0.3s;
+    border: 2px solid $accent;
+    border-radius: 24px;
+    background: $accent;
+    color: $white;
+    font-weight: $bold;
+    text-align: center;
+
+    &--small {
+      width: auto;
+      padding: 2px 12px;
+      font-size: $font-xs;
+    }
+
+    &:hover {
+      background: $white;
+      color: $accent;
+    }
   }
 
   .news-category {
@@ -22,20 +48,20 @@
       width: 160px;
       padding: 4px 20px;
       transition: color 0.3s, background 0.3s;
-      border: 2px solid $main;
+      border: 2px solid $accent;
       border-radius: 24px;
       background: $white;
-      color: $main;
+      color: $accent;
       font-weight: $bold;
       text-align: center;
 
       &[aria-current="page"] {
-        background: $main;
+        background: $accent;
         color: $white;
       }
 
       &:hover {
-        background: $main;
+        background: $accent;
         color: $white;
       }
     }
@@ -79,14 +105,21 @@
       flex: 1;
     }
 
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 8px;
+    }
+
     &__date {
-      margin-block: 0 8px;
+      margin-block: 0;
     }
 
     &__tag {
       display: inline-block;
       box-sizing: border-box;
-      margin-bottom: 16px;
       padding: 2px 12px;
       transition: color 0.3s, background 0.3s;
       border: 2px solid $main;
@@ -122,7 +155,29 @@
 
 @include md-sp {
   .news {
-    padding: 40px 20px 64px;
+    padding: 24px 20px 64px;
+  }
+
+  .news-tag {
+    display: inline-flex;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 110px;
+    padding: 3px 16px;
+    transition: color 0.3s, background 0.3s;
+    border: 2px solid $accent;
+    border-radius: 24px;
+    background: $accent;
+    color: $white;
+    font-size: $font-sm;
+    font-weight: $bold;
+    text-align: center;
+
+    &--small {
+      width: auto;
+      padding: 2px 12px;
+      font-size: $font-xs;
+    }
   }
 
   .news-category {
@@ -136,18 +191,19 @@
       display: inline-flex;
       box-sizing: border-box;
       justify-content: center;
-      width: 120px;
-      padding: 4px 20px;
+      width: 110px;
+      padding: 3px 16px;
       transition: color 0.3s, background 0.3s;
-      border: 2px solid $main;
+      border: 2px solid $accent;
       border-radius: 24px;
       background: $white;
-      color: $main;
+      color: $accent;
+      font-size: $font-sm;
       font-weight: $bold;
       text-align: center;
 
       &[aria-current="page"] {
-        background: $main;
+        background: $accent;
         color: $white;
       }
     }
@@ -188,14 +244,21 @@
       min-width: 220px;
     }
 
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 8px;
+    }
+
     &__date {
-      margin-block: 0 8px;
+      margin-block: 0;
     }
 
     &__tag {
       display: inline-block;
       box-sizing: border-box;
-      margin-bottom: 16px;
       padding: 2px 12px;
       border: 2px solid $main;
       border-radius: 24px;
