@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Morivela | ニュース</title>
+
+    <!-- Googleフォント -->
+    <!-- TODO: function.phpに移す -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 共通CSS-->
+    <link rel="stylesheet" href="./stylesheets/normalize.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <!-- 共通JS -->
+    <script src="./javascripts/common.js"></script>
+  </head>
+
+  <body>
+    <!-- #### header start ### -->
+    <header class="header">
+      <a href="/" class="header__logo">
+        <img
+          src="./images/common/logo.png"
+          alt="Cafe Morivela"
+          width="133"
+          height="42"
+        />
+      </a>
+      <button class="header-button js-menu-button" aria-label="メニューを開く">
+        <span></span>
+      </button>
+      <nav class="header-nav js-menu">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">わたしたちのこだわり</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">メニュー</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">ニュース</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">アクセス</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- #### header end ### -->
+
+    <!-- #### main start ### -->
+    <main class="main">
+      <section class="news">
+        <h2 class="heading"><span>News</span>ニュース</h2>
+
+        <ul class="news-category">
+          <li class="news-category__item">
+            <a href="" class="news-category__tag" aria-current="page">すべて</a>
+          </li>
+          <li class="news-category__item">
+            <a href="" class="news-category__tag">お知らせ</a>
+          </li>
+          <li class="news-category__item">
+            <a href="" class="news-category__tag">イベント</a>
+          </li>
+          <li class="news-category__item">
+            <a href="" class="news-category__tag">メニュー</a>
+          </li>
+        </ul>
+
+        <ul class="news-list">
+          <li class="news-list__item">
+            <a href="" class="news-list__image">
+              <img
+                src="./images/about/img_about.jpg"
+                alt="お知らせタイトルが入ります。お知らせタイトルが入ります。"
+                width="280"
+                height="209"
+              />
+            </a>
+            <div class="news-list__content">
+              <p class="news-list__date">2024.00.00</p>
+              <a href="" class="news-list__tag">お知らせ</a>
+              <a href="" class="news-list__title">
+                お知らせタイトルが入ります。お知らせタイトルが入ります。
+              </a>
+            </div>
+          </li>
+          <li class="news-list__item">
+            <a href="" class="news-list__image">
+              <img src="" alt="" width="280" height="209" />
+            </a>
+            <div class="news-list__content">
+              <p class="news-list__date">2024.00.00</p>
+              <a href="" class="news-list__tag">お知らせ</a>
+              <a href="" class="news-list__title">
+                お知らせタイトルが入ります。お知らせタイトルが入ります。
+              </a>
+            </div>
+          </li>
+          <li class="news-list__item">
+            <a href="" class="news-list__image">
+              <img src="" alt="" width="280" height="209" />
+            </a>
+            <div class="news-list__content">
+              <p class="news-list__date">2024.00.00</p>
+              <a href="" class="news-list__tag">お知らせ</a>
+              <a href="" class="news-list__title">
+                お知らせタイトルが入ります。お知らせタイトルが入ります。
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- #### main end ### -->
+
+    <!-- #### footer start ### -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <a href="/" class="footer__link">
+            <img
+              src="./images/common/logo.png"
+              alt="Cafe Morivela"
+              width="133"
+              height="42"
+            />
+          </a>
+        </div>
+        <div class="footer__box">
+          <nav class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">わたしたちのこだわり</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">メニュー</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">ニュース</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">アクセス</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="footer-sns">
+            <li class="footer-sns__item">
+              <a href="/" class="footer-sns__link" target="_blank"
+                ><img
+                  src="./images/common/ico_instagram.svg"
+                  alt="Instagram"
+                  width="32"
+                  height="32"
+              /></a>
+            </li>
+            <li class="footer-sns__item">
+              <a href="/" class="footer-sns__link" target="_blank"
+                ><img
+                  src="./images/common/ico_x.svg"
+                  alt="X"
+                  width="28"
+                  height="28"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">© Cafe Morivela</div>
+    </footer>
+    <!-- #### footer end ### -->
+  </body>
+</html>

@@ -153,7 +153,6 @@
     height: 100svh;
     padding: 120px 20px 80px;
     transform: translateX(100%);
-    transition: 0.3s all;
     background: $main-bg;
 
     &.is-open {
@@ -169,7 +168,6 @@
 
     &__link {
       position: relative;
-      padding-bottom: 8px;
       transition: color 0.3s;
       color: $text;
       font-size: 16px;

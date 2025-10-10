@@ -3,37 +3,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // トップページ
   // ヒーロースライダー
   //--------
-  const topHero = new Swiper(".js-top-hero", {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+  if (document.querySelector(".js-top-hero")) {
+    const topHero = new Swiper(".js-top-hero", {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
 
-    pagination: {
-      el: ".js-top-hero-pagination",
-      clickable: true,
-    },
-  });
-
-  //--------
-  // トップページ
-  // ヒーロースライダー 再生/停止ボタン
-  //--------
-  document
-    .querySelector(".js-top-hero-control")
-    .addEventListener("click", function () {
-      if (this.classList.contains("is-pause")) {
-        this.classList.remove("is-pause");
-        this.textContent = "停止する";
-        topHero.autoplay.start();
-      } else {
-        this.classList.add("is-pause");
-        this.textContent = "再生する";
-
-        topHero.autoplay.stop();
-      }
+      pagination: {
+        el: ".js-top-hero-pagination",
+        clickable: true,
+      },
     });
+
+    //--------
+    // トップページ
+    // ヒーロースライダー 再生/停止ボタン
+    //--------
+    document
+      .querySelector(".js-top-hero-control")
+      .addEventListener("click", function () {
+        if (this.classList.contains("is-pause")) {
+          this.classList.remove("is-pause");
+          this.textContent = "停止する";
+          topHero.autoplay.start();
+        } else {
+          this.classList.add("is-pause");
+          this.textContent = "再生する";
+
+          topHero.autoplay.stop();
+        }
+      });
+  }
 
   //--------
   // ヘッダー
