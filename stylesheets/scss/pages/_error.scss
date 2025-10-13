@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+
+@include md-pc {
+  .error {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 40px 40px 80px;
+
+    &__title {
+      margin-block: 0 24px;
+      font-weight: $bold;
+      text-align: center;
+    }
+
+    &__text {
+      margin-block: 0;
+      text-align: center;
+    }
+  }
+}
+
+@include md-sp {
+  .error {
+    padding: 24px 20px 64px;
+
+    &__title {
+      margin-block: 0 24px;
+      font-weight: $bold;
+      text-align: center;
+    }
+
+    &__text {
+      margin-block: 0;
+      text-align: center;
+    }
+  }
+}
