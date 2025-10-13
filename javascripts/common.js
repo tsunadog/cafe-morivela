@@ -128,21 +128,21 @@ function loading() {
           y: "-20",
           autoAlpha: 0,
           stagger: 0.6,
-          duration: 0.8,
+          duration: 0.6,
           ease: "power2.out",
         },
-        ">0.3"
+        ">0.2"
       )
       .to(
         ".js-loading",
         {
           autoAlpha: 0,
-          duration: 0.8,
+          duration: 0.4,
           onStart: () => {
             window.scrollTo({ top: 0 });
           },
         },
-        ">0.8"
+        ">0.6"
       );
   });
 }

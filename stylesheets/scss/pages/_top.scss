@@ -291,6 +291,10 @@
     &__content {
       flex: 1;
     }
+
+    &__button-box {
+      margin-top: 32px;
+    }
   }
 
   .top-access-list {
@@ -556,6 +560,12 @@
         width: 100%;
         height: 100%;
       }
+    }
+
+    &__button-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
     }
   }
 

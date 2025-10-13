@@ -703,6 +703,9 @@ button {
   .top-access__content {
     flex: 1;
   }
+  .top-access__button-box {
+    margin-top: 32px;
+  }
   .top-access-list {
     margin-block: 0;
   }
@@ -929,6 +932,11 @@ button {
     display: block;
     width: 100%;
     height: 100%;
+  }
+  .top-access__button-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
   }
   .top-access-list {
     margin-block: 0;
