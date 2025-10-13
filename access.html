@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Morivela | アクセス</title>
+
+    <!-- Googleフォント -->
+    <!-- TODO: function.phpに移す -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 共通CSS-->
+    <link rel="stylesheet" href="./stylesheets/normalize.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <!-- 共通JS -->
+    <script src="./javascripts/common.js"></script>
+  </head>
+
+  <body>
+    <!-- #### header start ### -->
+    <header class="header">
+      <a href="/" class="header__logo">
+        <img
+          src="./images/common/logo.png"
+          alt="Cafe Morivela"
+          width="133"
+          height="42"
+        />
+      </a>
+      <button class="header-button js-menu-button" aria-label="メニューを開く">
+        <span></span>
+      </button>
+      <nav class="header-nav js-menu">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">わたしたちのこだわり</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">メニュー</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">ニュース</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="" class="header-nav__link">アクセス</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- #### header end ### -->
+
+    <!-- #### main start ### -->
+    <main class="main">
+      <section class="access">
+        <h1 class="heading"><span>Access</span>アクセス</h1>
+
+        <div class="access__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12642.34417671459!2d139.6546947900034!3d35.626735029829774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4f2bc54ffab%3A0x6e427037e4c90f2d!2z6aeS5rKi44Kq44Oq44Oz44OU44OD44Kv5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1760343865849!5m2!1sja!2sjp"
+            width="920"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="access__box">
+          <section class="access__section">
+            <h2 class="access__heading">住所</h2>
+            <p class="access__text">
+              〒154-0013<br />東京都世田谷区駒沢公園1-7 グリーンサイドテラス 1F
+            </p>
+          </section>
+
+          <section class="access__section">
+            <h2 class="access__heading">営業時間</h2>
+            <p class="access__text">
+              月〜金：8:00〜20:00（L.O：19:30）<br />
+              土日祝：7:30〜21:00（L.O：20:30）
+            </p>
+          </section>
+
+          <section class="access__section">
+            <h2 class="access__heading">各交通手段でのアクセス</h2>
+
+            <section class="access__section-child">
+              <h3 class="access__title access__title--train">
+                電車でお越しの方
+              </h3>
+              <p class="access__text">
+                東急田園都市線「駒沢大学駅」公園口より徒歩10分。<br />
+                駒沢公園通りを南に進み、「公園西口交差点」を左折してすぐ。<br />
+                ベージュの建物1階、植物に囲まれた白いドアが目印です。
+              </p>
+            </section>
+
+            <section class="access__section-child">
+              <h3 class="access__title access__title--car">車でお越しの方</h3>
+              <p class="access__text">
+                専用駐車場はございません。<br />
+                公園内または近隣のコインパーキングをご利用ください。<br />
+                ・駒沢オリンピック公園 駐車場（約100台・30分300円）<br />
+                ・タイムズ駒沢2丁目（徒歩3分）
+              </p>
+            </section>
+
+            <section class="access__section-child">
+              <h3 class="access__title access__title--bike">
+                自転車でお越しの方
+              </h3>
+              <p class="access__text">
+                店舗前に5台分の駐輪スペースあり。<br />
+                満車の場合は、公園内の駐輪場をご利用ください。
+              </p>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+    <!-- #### main end ### -->
+
+    <!-- #### footer start ### -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <a href="/" class="footer__link">
+            <img
+              src="./images/common/logo.png"
+              alt="Cafe Morivela"
+              width="133"
+              height="42"
+            />
+          </a>
+        </div>
+        <div class="footer__box">
+          <nav class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">わたしたちのこだわり</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">メニュー</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">ニュース</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="" class="footer-nav__link">アクセス</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="footer-sns">
+            <li class="footer-sns__item">
+              <a href="/" class="footer-sns__link" target="_blank"
+                ><img
+                  src="./images/common/ico_instagram.svg"
+                  alt="Instagram"
+                  width="32"
+                  height="32"
+              /></a>
+            </li>
+            <li class="footer-sns__item">
+              <a href="/" class="footer-sns__link" target="_blank"
+                ><img
+                  src="./images/common/ico_x.svg"
+                  alt="X"
+                  width="28"
+                  height="28"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">© Cafe Morivela</div>
+    </footer>
+    <!-- #### footer end ### -->
+  </body>
+</html>

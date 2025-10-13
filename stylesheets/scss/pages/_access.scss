@@ -1,0 +1,214 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+@use "../abstracts/function" as *;
+
+@include md-pc {
+  .access {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 40px 40px 80px;
+
+    &__map {
+      margin-bottom: 32px;
+      overflow: hidden;
+      border-radius: 16px;
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    &__box {
+      padding: 40px;
+      border-radius: 16px;
+      background-color: $white;
+    }
+
+    &__section {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__section-child {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__heading {
+      position: relative;
+      margin-block: 0 20px;
+      padding-bottom: 8px;
+      font-size: $font-xl;
+      font-weight: $bold;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 4px;
+        border-radius: 100vh;
+        background: $accent;
+      }
+    }
+
+    &__text {
+      margin-block: 0 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      margin-block: 0 12px;
+      font-size: $font-lg;
+      font-weight: $bold;
+      gap: 4px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      &--train {
+        &::before {
+          background-image: image-url("access/ico_train.svg");
+        }
+      }
+
+      &--car {
+        &::before {
+          background-image: image-url("access/ico_car.svg");
+        }
+      }
+
+      &--bike {
+        &::before {
+          background-image: image-url("access/ico_bike.svg");
+        }
+      }
+    }
+  }
+}
+
+@include md-sp {
+  .access {
+    padding: 24px 20px 64px;
+
+    &__map {
+      margin-bottom: 24px;
+      overflow: hidden;
+      border-radius: 16px;
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: 360px;
+      }
+    }
+
+    &__box {
+      padding: 32px 20px;
+      border-radius: 16px;
+      background-color: $white;
+    }
+
+    &__section {
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__section-child {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__heading {
+      position: relative;
+      margin-block: 0 20px;
+      padding-bottom: 8px;
+      font-size: $font-lg;
+      font-weight: $bold;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 4px;
+        border-radius: 100vh;
+        background: $accent;
+      }
+    }
+
+    &__text {
+      margin-block: 0 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      margin-block: 0 8px;
+      font-size: $font-base;
+      font-weight: $bold;
+      gap: 4px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      &--train {
+        &::before {
+          background-image: image-url("access/ico_train.svg");
+        }
+      }
+
+      &--car {
+        &::before {
+          background-image: image-url("access/ico_car.svg");
+        }
+      }
+
+      &--bike {
+        &::before {
+          background-image: image-url("access/ico_bike.svg");
+        }
+      }
+    }
+  }
+}

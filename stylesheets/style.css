@@ -681,11 +681,16 @@ button {
     background: #fff;
   }
   .top-access__map {
-    width: 40%;
-    max-width: 355px;
+    width: 48%;
+    max-width: 380px;
     aspect-ratio: 1/1;
     overflow: hidden;
     border-radius: 16px;
+  }
+  .top-access__map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .top-access__box {
     display: flex;
@@ -693,7 +698,6 @@ button {
     align-items: flex-start;
     max-width: 1000px;
     margin: 0 auto;
-    padding-inline: 40px;
     gap: 40px;
   }
   .top-access__content {
@@ -916,11 +920,15 @@ button {
     background: #fff;
   }
   .top-access__map {
-    max-width: 355px;
+    height: 300px;
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 16px;
-    aspect-ratio: 1/1;
+  }
+  .top-access__map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .top-access-list {
     margin-block: 0;
@@ -1570,6 +1578,171 @@ button {
   .error__text {
     margin-block: 0;
     text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .access {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 40px 40px 80px;
+  }
+  .access__map {
+    margin-bottom: 32px;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .access__map iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+  .access__box {
+    padding: 40px;
+    border-radius: 16px;
+    background-color: #fff;
+  }
+  .access__section {
+    margin-bottom: 40px;
+  }
+  .access__section:last-child {
+    margin-bottom: 0;
+  }
+  .access__section-child {
+    margin-bottom: 24px;
+  }
+  .access__section-child:last-child {
+    margin-bottom: 0;
+  }
+  .access__heading {
+    position: relative;
+    margin-block: 0 20px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .access__heading::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    border-radius: 100vh;
+    background: #d4a373;
+  }
+  .access__text {
+    margin-block: 0 16px;
+  }
+  .access__text:last-child {
+    margin-bottom: 0;
+  }
+  .access__title {
+    display: flex;
+    align-items: center;
+    margin-block: 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 4px;
+  }
+  .access__title::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  .access__title--train::before {
+    background-image: url("../images/access/ico_train.svg");
+  }
+  .access__title--car::before {
+    background-image: url("../images/access/ico_car.svg");
+  }
+  .access__title--bike::before {
+    background-image: url("../images/access/ico_bike.svg");
+  }
+}
+@media screen and (width <= 767px) {
+  .access {
+    padding: 24px 20px 64px;
+  }
+  .access__map {
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  .access__map iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+  }
+  .access__box {
+    padding: 32px 20px;
+    border-radius: 16px;
+    background-color: #fff;
+  }
+  .access__section {
+    margin-bottom: 32px;
+  }
+  .access__section:last-child {
+    margin-bottom: 0;
+  }
+  .access__section-child {
+    margin-bottom: 24px;
+  }
+  .access__section-child:last-child {
+    margin-bottom: 0;
+  }
+  .access__heading {
+    position: relative;
+    margin-block: 0 20px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .access__heading::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    border-radius: 100vh;
+    background: #d4a373;
+  }
+  .access__text {
+    margin-block: 0 16px;
+  }
+  .access__text:last-child {
+    margin-bottom: 0;
+  }
+  .access__title {
+    display: flex;
+    align-items: center;
+    margin-block: 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 4px;
+  }
+  .access__title::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  .access__title--train::before {
+    background-image: url("../images/access/ico_train.svg");
+  }
+  .access__title--car::before {
+    background-image: url("../images/access/ico_car.svg");
+  }
+  .access__title--bike::before {
+    background-image: url("../images/access/ico_bike.svg");
   }
 }
 
