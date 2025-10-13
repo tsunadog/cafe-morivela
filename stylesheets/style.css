@@ -980,6 +980,9 @@ button {
     justify-content: center;
     gap: 40px;
   }
+  .menu .menu-list {
+    justify-content: flex-start;
+  }
   .menu-list__item {
     display: flex;
     flex-direction: column;
