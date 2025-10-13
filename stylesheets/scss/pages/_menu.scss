@@ -2,6 +2,40 @@
 @use "../abstracts/mixin" as *;
 
 @include md-pc {
+  .menu {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 40px 40px 80px;
+
+    &__section {
+      margin-bottom: 64px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__category {
+      position: relative;
+      margin-block: 0 24px;
+      padding-bottom: 8px;
+      font-size: $font-xxl;
+      font-weight: $normal;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 4px;
+        border-radius: 100vh;
+        background: $accent;
+      }
+    }
+  }
+
   .menu-list {
     display: flex;
     flex-wrap: wrap;
@@ -46,6 +80,37 @@
 }
 
 @include md-sp {
+  .menu {
+    padding: 24px 20px 64px;
+
+    &__section {
+      margin-bottom: 64px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__category {
+      position: relative;
+      margin-block: 0 24px;
+      padding-bottom: 8px;
+      font-size: $font-xxl;
+      font-weight: $normal;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 4px;
+        border-radius: 100vh;
+        background: $accent;
+      }
+    }
+  }
+
   .menu-list {
     display: flex;
     flex-wrap: wrap;
