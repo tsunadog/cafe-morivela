@@ -456,6 +456,109 @@ button {
     line-height: 1.2;
   }
 }
+@media screen and (min-width: 768px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .pagination .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  .pagination .page-numbers {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 50%;
+    color: #b88c66;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .pagination .page-numbers:hover {
+    background-color: #b88c66;
+    color: #fff;
+  }
+  .pagination .page-numbers.current {
+    position: relative;
+    background-color: #b88c66;
+    color: #fff;
+  }
+  .pagination .page-numbers.prev, .pagination .page-numbers.next {
+    position: relative;
+    border: 2px solid #b88c66;
+    font-size: 0;
+  }
+  .pagination .page-numbers.prev::before, .pagination .page-numbers.next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1px);
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s;
+    background-color: #b88c66;
+    mask: url("../images/common/ico_arrow_left.svg") no-repeat center/contain;
+  }
+  .pagination .page-numbers.prev:hover::before, .pagination .page-numbers.next:hover::before {
+    background-color: #fff;
+  }
+  .pagination .page-numbers.next {
+    transform: scale(-1, 1);
+  }
+}
+@media screen and (width <= 767px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .pagination .nav-links {
+    display: flex;
+    gap: 16px;
+  }
+  .pagination .page-numbers {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #b88c66;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .pagination .page-numbers.current {
+    position: relative;
+    background-color: #b88c66;
+    color: #fff;
+  }
+  .pagination .page-numbers.prev, .pagination .page-numbers.next {
+    position: relative;
+    border: 2px solid #b88c66;
+    font-size: 0;
+  }
+  .pagination .page-numbers.prev::before, .pagination .page-numbers.next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1px);
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #b88c66;
+    mask: url("../images/common/ico_arrow_left.svg") no-repeat center/contain;
+  }
+  .pagination .page-numbers.next {
+    transform: scale(-1, 1);
+  }
+}
 @keyframes scroll {
   0% {
     transform: scale(1, 0);
