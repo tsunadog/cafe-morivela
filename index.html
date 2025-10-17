@@ -17,6 +17,7 @@
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
     <!-- Swiper -->
     <link
@@ -101,6 +102,7 @@
               alt="Cafe Morivela"
               width="240"
               height="82"
+              loading="lazy"
             />
           </h1>
           <div class="top-hero__text-box js-top-text">
@@ -136,15 +138,15 @@
         <section class="top-about">
           <h2 class="heading"><span>About</span>わたしたちのこだわり</h2>
           <div class="top-about__inner">
-            <div class="top-about__image">
+            <div class="top-about__image js-fade-in-left">
               <img
-                src="./images/about/img_about.jpg"
+                src="./images/about/img_about.png"
                 alt=""
                 width="355"
                 height="355"
               />
             </div>
-            <div class="top-about__content">
+            <div class="top-about__content js-fade-in-left">
               <p class="top-about__text">
                 忙しい毎日の中で、ほっと深呼吸できるような場所をつくりたい。<br />
                 そんな想いから、このカフェは生まれました。
@@ -160,7 +162,7 @@
               <p class="top-about__text">
                 わたしたちは、すべての瞬間に“やさしさ”を込めています。
               </p>
-              <div class="top-about__button-box">
+              <div class="top-about__button-box js-fade-in">
                 <a href="" class="button-primary button-primary--arrow-right"
                   >もっと見る</a
                 >
@@ -176,10 +178,10 @@
             <h2 class="heading"><span>Menu</span>メニュー</h2>
 
             <ul class="menu-list">
-              <li class="menu-list__item">
+              <li class="menu-list__item js-fade-in-left">
                 <div class="menu-list__image">
                   <img
-                    src="./images/about/img_about.jpg"
+                    src="./images/about/img_about.png"
                     alt=""
                     width="280"
                     height="210"
@@ -190,7 +192,7 @@
                   <p class="menu-list__price">¥500</p>
                 </div>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__item js-fade-in-left">
                 <div class="menu-list__image">
                   <img src="" alt="" width="280" height="210" />
                 </div>
@@ -199,7 +201,7 @@
                   <p class="menu-list__price">¥500</p>
                 </div>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__ite js-fade-in-left">
                 <div class="menu-list__image">
                   <img src="" alt="" width="280" height="210" />
                 </div>
@@ -208,7 +210,7 @@
                   <p class="menu-list__price">¥500</p>
                 </div>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__item js-fade-in-left">
                 <div class="menu-list__image">
                   <img src="" alt="" width="280" height="210" />
                 </div>
@@ -217,7 +219,7 @@
                   <p class="menu-list__price">¥500</p>
                 </div>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__item js-fade-in-left">
                 <div class="menu-list__image">
                   <img src="" alt="" width="280" height="210" />
                 </div>
@@ -226,7 +228,7 @@
                   <p class="menu-list__price">¥500</p>
                 </div>
               </li>
-              <li class="menu-list__item">
+              <li class="menu-list__item js-fade-in-left">
                 <div class="menu-list__image">
                   <img src="" alt="" width="280" height="210" />
                 </div>
@@ -237,7 +239,7 @@
               </li>
             </ul>
 
-            <div class="button-box">
+            <div class="button-box js-fade-in">
               <a href="" class="button-primary button-primary--arrow-right"
                 >メニューを見る</a
               >
@@ -252,10 +254,10 @@
             <h2 class="heading"><span>News</span>ニュース</h2>
 
             <ul class="news-list">
-              <li class="news-list__item">
+              <li class="news-list__item js-fade-in">
                 <a href="" class="news-list__image">
                   <img
-                    src="./images/about/img_about.jpg"
+                    src="./images/about/img_about.png"
                     alt="お知らせタイトルが入ります。お知らせタイトルが入ります。"
                     width="280"
                     height="210"
@@ -271,7 +273,7 @@
                   </a>
                 </div>
               </li>
-              <li class="news-list__item">
+              <li class="news-list__item js-fade-in">
                 <a href="" class="news-list__image">
                   <img
                     src=""
@@ -290,7 +292,7 @@
                   </a>
                 </div>
               </li>
-              <li class="news-list__item">
+              <li class="news-list__item js-fade-in">
                 <a href="" class="news-list__image">
                   <img
                     src=""
@@ -311,7 +313,7 @@
               </li>
             </ul>
 
-            <div class="button-box">
+            <div class="button-box js-fade-in">
               <a href="" class="button-primary button-primary--arrow-right"
                 >ニュースを見る</a
               >
@@ -325,7 +327,7 @@
           <div class="top-access__inner">
             <h2 class="heading"><span>Access</span>アクセス</h2>
             <div class="top-access__box">
-              <div class="top-access__map">
+              <div class="top-access__map js-fade-in-left">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12642.34417671459!2d139.6546947900034!3d35.626735029829774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4f2bc54ffab%3A0x6e427037e4c90f2d!2z6aeS5rKi44Kq44Oq44Oz44OU44OD44Kv5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1760343865849!5m2!1sja!2sjp"
                   width="355"
@@ -336,7 +338,7 @@
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <div class="top-access__content">
+              <div class="top-access__content js-fade-in-left">
                 <dl class="top-access-list">
                   <div class="top-access-list__block">
                     <dt class="top-access-list__title">住所</dt>

@@ -87,6 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
         menuOpen(button, menu);
       }
     });
+
+  fadeIn();
 });
 
 // ＊＊＊＊ リサイズ時 ＊＊＊＊
@@ -179,4 +181,49 @@ function menuClose(button, menu) {
     },
     { once: true }
   );
+}
+
+//--------
+// gsap フェードインアニメーション
+//--------
+function fadeIn() {
+  if (document.querySelector(".js-fade-in")) {
+    //下からフェードイン
+    gsap.utils.toArray(".js-fade-in").forEach((el) => {
+      gsap.from(el, {
+        y: 50,
+        autoAlpha: 0,
+        duration: 0.6,
+        ease: Power2.out,
+        scrollTrigger: {
+          start: "top 80%",
+          trigger: el,
+        },
+      });
+    });
+  }
+
+  if (document.querySelector(".js-fade-in-left")) {
+    //左から順に下からフェードイン
+    gsap.set(".js-fade-in-left", {
+      y: 50,
+      autoAlpha: 0,
+    });
+
+    ScrollTrigger.batch(".js-fade-in-left", {
+      batchMax: 3,
+      onEnter: (batch) =>
+        gsap.to(batch, {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.6,
+          ease: Power2.out,
+          stagger: {
+            each: 0.3,
+            from: "start",
+          },
+        }),
+      start: "top 80%",
+    });
+  }
 }
